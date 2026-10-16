@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Send a Sweet Crumbs order enquiry with your treat selection and preferred date."
+    >
+    <meta name="theme-color" content="#fff8ef">
+    <title>Place an Order | Sweet Crumbs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="order-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html#home" aria-label="Sweet Crumbs home">
+          <span class="brand-mark" aria-hidden="true">S<span>•</span>C</span>
+          <span class="brand-name">Sweet Crumbs</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Open navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="products.html">Products</a>
+          <a href="order.html" aria-current="page">Order</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="button button-small nav-order" href="order.html">
+            Order now <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="order-section section-pad" aria-labelledby="order-title">
+        <div class="section-shell order-layout">
+          <div class="order-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> Something lovely, in the works</p>
+            <h1 class="section-title" id="order-title">Tell us what<br>you’re <em>craving.</em></h1>
+            <p>
+              Share a few details and your preferred date. This demo form checks
+              your enquiry in this browser only—it doesn’t send anything to a bakery.
+            </p>
+            <div class="order-aside">
+              <span class="aside-icon" aria-hidden="true">✳</span>
+              <p>Have a special request? Add a note and it can be discussed when a real enquiry service is connected.</p>
+            </div>
+          </div>
+
+          <form class="order-form" id="order-form" novalidate>
+            <p class="form-demo-note"><strong>Demo enquiry form</strong> · No order is sent or received.</p>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="customer-name">Your name <span aria-hidden="true">*</span></label>
+                <input id="customer-name" name="name" type="text" autocomplete="name" required aria-describedby="customer-name-error">
+                <span class="field-error" id="customer-name-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="customer-phone">Phone number <span aria-hidden="true">*</span></label>
+                <input id="customer-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="customer-phone-error">
+                <span class="field-error" id="customer-phone-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="customer-email">Email address <span class="optional">(optional)</span></label>
+                <input id="customer-email" name="email" type="email" autocomplete="email" aria-describedby="customer-email-error">
+                <span class="field-error" id="customer-email-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="product-select">Choose a treat <span aria-hidden="true">*</span></label>
+                <select id="product-select" name="product" required aria-describedby="product-select-error">
+                  <option value="">Select a product</option>
+                  <option>Chocolate Cake</option>
+                  <option>Vanilla Cupcakes</option>
+                  <option>Chocolate Chip Cookies</option>
+                  <option>Strawberry Cake</option>
+                  <option>Red Velvet Cupcakes</option>
+                  <option>Butter Cookies</option>
+                </select>
+                <span class="field-error" id="product-select-error"></span>
+                <p class="selected-product-price" id="product-price-note" aria-live="polite" hidden></p>
+              </div>
+              <div class="form-field">
+                <label for="quantity">Quantity <span aria-hidden="true">*</span></label>
+                <input id="quantity" name="quantity" type="number" min="1" max="99" value="1" required aria-describedby="quantity-error">
+                <span class="field-error" id="quantity-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="delivery-date">Preferred date <span aria-hidden="true">*</span></label>
+                <input id="delivery-date" name="date" type="date" required aria-describedby="delivery-date-error">
+                <span class="field-error" id="delivery-date-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="fulfilment">Delivery or pickup <span aria-hidden="true">*</span></label>
+                <select id="fulfilment" name="fulfilment" required aria-describedby="fulfilment-error">
+                  <option value="">Choose one</option>
+                  <option value="delivery">Delivery</option>
+                  <option value="pickup">Pickup</option>
+                </select>
+                <span class="field-error" id="fulfilment-error"></span>
+              </div>
+              <div class="form-field address-field" id="address-field" hidden>
+                <label for="delivery-address">Delivery address <span aria-hidden="true">*</span></label>
+                <textarea id="delivery-address" name="address" rows="3" autocomplete="street-address" aria-describedby="address-error"></textarea>
+                <span class="field-error" id="address-error"></span>
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="instructions">Anything else we should know? <span class="optional">(optional)</span></label>
+                <textarea id="instructions" name="instructions" rows="3" placeholder="Flavours, a little note, or other details…"></textarea>
+              </div>
+            </div>
+            <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+            <button class="button submit-button" type="submit">Check my enquiry <span aria-hidden="true">↗</span></button>
+            <p class="form-status" id="form-status" role="status" tabindex="-1" hidden></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <div class="footer-brand">
+          <a class="brand brand-light" href="index.html#home">
+            <span class="brand-mark" aria-hidden="true">S<span>•</span>C</span>
+            <span class="brand-name">Sweet Crumbs</span>
+          </a>
+          <p>A little sweetness, made fresh and shared with love.</p>
+        </div>
+        <nav class="footer-navigation" aria-label="Footer navigation">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="products.html">Products</a>
+          <a href="order.html" aria-current="page">Order</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <p class="copyright">© <span id="current-year">2026</span> Sweet Crumbs. Website concept for demonstration.</p>
+      </div>
+    </footer>
+  </body>
+</html>
